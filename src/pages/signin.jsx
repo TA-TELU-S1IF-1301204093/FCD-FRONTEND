@@ -51,7 +51,7 @@ function Signin() {
     <div className="w-screen h-screen bg-mainWhite flex">
       {/* left side */}
       <div className="bg-mainWhite w-[60%] h-full flex items-center justify-center px-20">
-        <form className="flex flex-col gap-10">
+        <form className="flex flex-col gap-10 w-[500px]">
           <h1 className="text-center text-mainGreen font-bold text-4xl">
             Sign In to MNote
           </h1>
