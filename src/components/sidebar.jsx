@@ -92,7 +92,7 @@ function Sidebar() {
                         {user}
                     </h3>
                     <button
-                        className="border border-mainGreen text-mainRed rounded-full px-8 py-1"
+                        className="border border-mainGreen text-mainRed rounded-full px-8 py-1 font-semibold"
                         onClick={handleLogout}
                     >
                         Logout
