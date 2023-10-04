@@ -4,6 +4,7 @@ import Signup from "./pages/signup";
 import Dashboard from "./pages/dashboard";
 import Summary from "./pages/summary";
 import Search from "./pages/search";
+import Settings from "./pages/settings";
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/summary" element={<Summary />} />
                 <Route path="/search" element={<Search />} />
+                <Route path="/settings" element={<Settings />} />
             </Routes>
         </Router>
     );
