@@ -8,6 +8,7 @@ import Settings from "./pages/settings";
 import Help from "./pages/help";
 import LoginAdmin from "./pages/admin/LoginAdmin";
 import DashboardAdmin from "./pages/admin/DashboardAdmin";
+import ManageUsers from "./pages/admin/ManageUsers";
 
 function App() {
     return (
@@ -24,6 +25,7 @@ function App() {
                 {/* admin */}
                 <Route path="/admin/login" element={<LoginAdmin />} />
                 <Route path="/admin/dashboard" element={<DashboardAdmin />} />
+                <Route path="/admin/manage-users" element={<ManageUsers />} />
             </Routes>
         </Router>
     );
