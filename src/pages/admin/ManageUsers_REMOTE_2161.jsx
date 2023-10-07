@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
-<<<<<<< HEAD
-=======
 import { MdOutlineDeleteOutline } from "react-icons/md";
->>>>>>> feature/manage-users
 
 import SidebarAdmin from "../../components/admin/SidebarAdmin";
 import DashboardCardAdmin from "../../components/admin/DashboardCardAdmin";
@@ -52,10 +49,6 @@ function ManageUsers() {
             });
         }
     };
-<<<<<<< HEAD
-    const handleEditClick = async () => {};
-=======
->>>>>>> feature/manage-users
 
     useEffect(() => {
         getAccountData();
@@ -102,23 +95,6 @@ function ManageUsers() {
                                     <td>{acc.name}</td>
                                     <td>{acc.email}</td>
                                     <td>{acc.role}</td>
-<<<<<<< HEAD
-                                    <td className="flex justify-evenly">
-                                        <button
-                                            id={acc._id}
-                                            className="text-mainRed"
-                                            onClick={handleDeleteClick}
-                                        >
-                                            Delete
-                                        </button>
-                                        <button
-                                            id={acc._id}
-                                            className="text-mainRed"
-                                            onClick={handleEditClick}
-                                        >
-                                            Edit
-                                        </button>
-=======
                                     <td>
                                         <MdOutlineDeleteOutline
                                             size={30}
@@ -126,7 +102,6 @@ function ManageUsers() {
                                             className="cursor-pointer text-mainRed mx-auto my-auto"
                                             onClick={handleDeleteClick}
                                         />
->>>>>>> feature/manage-users
                                     </td>
                                 </tr>
                             ))}
