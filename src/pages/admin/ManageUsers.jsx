@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { MdOutlineDeleteOutline } from "react-icons/md";
 
 import SidebarAdmin from "../../components/admin/SidebarAdmin";
 import DashboardCardAdmin from "../../components/admin/DashboardCardAdmin";
@@ -48,7 +49,6 @@ function ManageUsers() {
             });
         }
     };
-    const handleEditClick = async () => {};
 
     useEffect(() => {
         getAccountData();
@@ -95,21 +95,13 @@ function ManageUsers() {
                                     <td>{acc.name}</td>
                                     <td>{acc.email}</td>
                                     <td>{acc.role}</td>
-                                    <td className="flex justify-evenly">
-                                        <button
+                                    <td>
+                                        <MdOutlineDeleteOutline
+                                            size={30}
                                             id={acc._id}
-                                            className="text-mainRed"
+                                            className="cursor-pointer text-mainRed mx-auto my-auto"
                                             onClick={handleDeleteClick}
-                                        >
-                                            Delete
-                                        </button>
-                                        <button
-                                            id={acc._id}
-                                            className="text-mainRed"
-                                            onClick={handleEditClick}
-                                        >
-                                            Edit
-                                        </button>
+                                        />
                                     </td>
                                 </tr>
                             ))}
