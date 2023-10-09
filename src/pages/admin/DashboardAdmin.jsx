@@ -34,6 +34,23 @@ function DashboardAdmin() {
         });
     };
 
+    const deleteAllOrderData = async (e) => {
+        e.preventDefault();
+
+        // confirmation
+        const confirmed = window.confirm(
+            "Are you sure you want to delete all order data? (this can't be undone)"
+        );
+        if (confirmed) {
+            await AdminApi.delete("/orders", {
+                headers: {
+                    Authorization: `jwt ${localStorage.getItem("adminToken")}`,
+                },
+            });
+            window.location.reload();
+        }
+    };
+
     const decode = async (userId) => {
         const result = await userApi.post("/", {
             userId: userId,
@@ -67,10 +84,16 @@ function DashboardAdmin() {
         <div className="max-h-screen flex overflow-hidden">
             <SidebarAdmin />
             <div className="flex flex-col w-full px-20 py-10 bg-altWhite gap-5">
-                <div className="flex items-center w-full">
+                <div className="flex items-center w-full gap-5">
                     <h1 className="text-lg font-medium text-mainGreen">
                         Dashboard
                     </h1>
+                    <button
+                        className="text-mainWhite bg-mainRed rounded-lg border border-mainWhite px-4 py-1 hover:scale-105 transition-all duration-100"
+                        onClick={deleteAllOrderData}
+                    >
+                        Reset All Order Data
+                    </button>
                 </div>
                 <div className="grid grid-cols-4 gap-5">
                     <DashboardCardAdmin

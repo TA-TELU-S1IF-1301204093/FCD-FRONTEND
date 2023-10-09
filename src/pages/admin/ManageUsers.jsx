@@ -49,7 +49,6 @@ function ManageUsers() {
             });
         }
     };
-    const handleEditClick = async () => {};
 
     useEffect(() => {
         getAccountData();
