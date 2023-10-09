@@ -9,7 +9,7 @@ import userApi from "../../api/user-api";
 function DashboardAdmin() {
     const [totalOrders, setTotalOrders] = useState(0);
     const [totalIncome, setTotalIncome] = useState(0);
-    const [orderData, setOrderData] = useState();
+    const [orderData, setOrderData] = useState([]);
     const [decodedNames, setDecodedNames] = useState([]);
 
     const fetchOrderData = async () => {
@@ -18,7 +18,7 @@ function DashboardAdmin() {
                 Authorization: `jwt ${localStorage.getItem("adminToken")}`,
             },
         }).then((response) => {
-            setOrderData(response.data.data);
+            setOrderData(response.data.data.reverse());
 
             var totalOrders = 0;
             for (const order of response.data.data) {

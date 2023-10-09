@@ -9,6 +9,7 @@ import Help from "./pages/help";
 import LoginAdmin from "./pages/admin/LoginAdmin";
 import DashboardAdmin from "./pages/admin/DashboardAdmin";
 import ManageUsers from "./pages/admin/ManageUsers";
+import ManageHelp from "./pages/admin/ManageHelp";
 
 function App() {
     return (
@@ -26,6 +27,7 @@ function App() {
                 <Route path="/admin/login" element={<LoginAdmin />} />
                 <Route path="/admin/dashboard" element={<DashboardAdmin />} />
                 <Route path="/admin/manage-users" element={<ManageUsers />} />
+                <Route path="/admin/manage-helps" element={<ManageHelp />} />
             </Routes>
         </Router>
     );

@@ -56,6 +56,15 @@ function SidebarAdmin() {
                         >
                             <a href="/admin/manage-users">Manage Users</a>
                         </li>
+                        <li
+                            className={
+                                pathName === "/admin/manage-helps"
+                                    ? "text-mainGreen font-bold text-xl py-2 border-r-mainGreen border-r-4 border border-l-transparent border-t-transparent border-b-transparent"
+                                    : "text-mainGray font-normal text-xl py-2"
+                            }
+                        >
+                            <a href="/admin/manage-helps">Manage Helps</a>
+                        </li>
                     </ul>
                 </div>
                 <div className="w-full text-center text-[18px] pb-5">
