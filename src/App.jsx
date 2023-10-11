@@ -10,6 +10,7 @@ import LoginAdmin from "./pages/admin/LoginAdmin";
 import DashboardAdmin from "./pages/admin/DashboardAdmin";
 import ManageUsers from "./pages/admin/ManageUsers";
 import ManageHelp from "./pages/admin/ManageHelp";
+import ManagePrice from "./pages/admin/ManagePrice";
 
 function App() {
     return (
@@ -28,6 +29,7 @@ function App() {
                 <Route path="/admin/dashboard" element={<DashboardAdmin />} />
                 <Route path="/admin/manage-users" element={<ManageUsers />} />
                 <Route path="/admin/manage-helps" element={<ManageHelp />} />
+                <Route path="/admin/manage-price" element={<ManagePrice />} />
             </Routes>
         </Router>
     );

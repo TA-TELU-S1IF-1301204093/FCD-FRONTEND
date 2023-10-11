@@ -12,6 +12,7 @@ function Search() {
 
     const [userId, setUserId] = useState("");
     const [orderData, setOrderData] = useState();
+    const isEmpty = orderData?.length > 0 ? false : true;
 
     const handleOnChange = (e) => {
         setSelectedItem(e.target.value);
@@ -164,6 +165,9 @@ function Search() {
                             </tbody>
                         )}
                     </table>
+                    {isEmpty && (
+                        <p className="text-center text-mainRed">Empty data</p>
+                    )}
                 </div>
             </div>
             <DeleteOrderModal

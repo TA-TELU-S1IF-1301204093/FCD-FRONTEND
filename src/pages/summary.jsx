@@ -12,6 +12,7 @@ function Summary() {
 
     const [userId, setUserId] = useState("");
     const [orderData, setOrderData] = useState();
+    const isEmpty = orderData?.length > 0 ? false : true;
 
     // handle the date selection naming
     const getDayName = (unformattedDate) => {
@@ -184,6 +185,9 @@ function Summary() {
                             </tbody>
                         )}
                     </table>
+                    {isEmpty && (
+                        <p className="text-center text-mainRed">Empty data</p>
+                    )}
                 </div>
             </div>
             <DeleteOrderModal

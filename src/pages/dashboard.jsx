@@ -9,6 +9,7 @@ import AddOrderModal from "../components/add-order-modal.jsx";
 
 function Dashboard() {
     const [orders, setOrders] = useState([]);
+    const isEmpty = orders?.length > 0 ? false : true;
 
     const [currentDate, setCurrentDate] = useState("");
     const [dayName, setDayName] = useState("");
@@ -190,6 +191,9 @@ function Dashboard() {
                             ))}
                         </tbody>
                     </table>
+                    {isEmpty && (
+                        <p className="text-center text-mainRed">Empty data</p>
+                    )}
                 </div>
                 <div className="w-full flex justify-between items-center border border-mainDark mt-5 px-20">
                     <h1 className="font-bold text-mainGreen text-[24px]">

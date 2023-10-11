@@ -11,6 +11,7 @@ function DashboardAdmin() {
     const [totalIncome, setTotalIncome] = useState(0);
     const [orderData, setOrderData] = useState([]);
     const [decodedNames, setDecodedNames] = useState([]);
+    const isEmpty = orderData?.length > 0 ? false : true;
 
     const fetchOrderData = async () => {
         await AdminApi.get("/orders", {
@@ -132,6 +133,9 @@ function DashboardAdmin() {
                             ))}
                         </tbody>
                     </table>
+                    {isEmpty && (
+                        <p className="text-center text-mainRed">Empty data</p>
+                    )}
                 </div>
             </div>
         </div>

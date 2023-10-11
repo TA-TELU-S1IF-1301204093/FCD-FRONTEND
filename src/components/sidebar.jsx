@@ -25,6 +25,7 @@ function Sidebar() {
     const handleLogout = (e) => {
         e.preventDefault();
         localStorage.removeItem("token");
+        alert("Logged out. You will be redirected to the login page");
         navigate("/");
     };
 
