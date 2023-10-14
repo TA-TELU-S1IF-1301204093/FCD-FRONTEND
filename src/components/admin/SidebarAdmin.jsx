@@ -22,6 +22,7 @@ function SidebarAdmin() {
     const handleLogout = (e) => {
         e.preventDefault();
         localStorage.removeItem("adminToken");
+        alert("Logged out. You will be redirected to the login page");
         navigate("/admin/login");
     };
 
@@ -64,6 +65,15 @@ function SidebarAdmin() {
                             }
                         >
                             <a href="/admin/manage-helps">Manage Helps</a>
+                        </li>
+                        <li
+                            className={
+                                pathName === "/admin/manage-price"
+                                    ? "text-mainGreen font-bold text-xl py-2 border-r-mainGreen border-r-4 border border-l-transparent border-t-transparent border-b-transparent"
+                                    : "text-mainGray font-normal text-xl py-2"
+                            }
+                        >
+                            <a href="/admin/manage-price">Manage Price</a>
                         </li>
                     </ul>
                 </div>

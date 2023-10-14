@@ -24,7 +24,6 @@ function LoginAdmin() {
             password: adminData.password,
         })
             .then((response) => {
-                // console.log(response.data.token);
                 if (response.data.status === "success") {
                     localStorage.setItem("adminToken", response.data.token);
                     navigate("/admin/dashboard");
@@ -33,8 +32,7 @@ function LoginAdmin() {
                 }
             })
             .catch((err) => {
-                console.log(err);
-                console.clear();
+                alert(err.response.data.message);
             });
         setAdminData({
             email: "",
